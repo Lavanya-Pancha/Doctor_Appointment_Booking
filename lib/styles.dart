@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 ButtonStyle buttonStyle = TextButton.styleFrom(
     backgroundColor: Colors.blueGrey,
     elevation: 5.0,
-    padding: EdgeInsets.only(left:50.0,top: 15.0,right:50.0,bottom: 15.0),
+    padding: EdgeInsets.only(left:35.0,top: 15.0,right:35.0,bottom: 15.0),
     shape: RoundedRectangleBorder(
       borderRadius: BorderRadius.circular(20.0),
 

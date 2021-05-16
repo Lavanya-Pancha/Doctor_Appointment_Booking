@@ -227,7 +227,7 @@ class _patientListState extends State<patientList>{
                             child:Row(
                               mainAxisAlignment: MainAxisAlignment.spaceAround,
                               children: [
-                                _booked?TextButton(
+                                appoints[0]['status']=="Pending"?TextButton(
                                     onPressed: (){
                                       Navigator.push(context, MaterialPageRoute(builder: (context)=>UpdateAppointment(patient: patient,appoints:appoints[0])));
                                     },
@@ -409,6 +409,9 @@ class _patientListState extends State<patientList>{
   }
 
   getappoints(patient) async {
+    if(appoints!=null){
+      appoints.clear();
+    }
     await appointmentService().getAppoint(patient).then((val){
       setState(() {
         if(val != "Fail"){
